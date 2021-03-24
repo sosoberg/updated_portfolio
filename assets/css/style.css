@@ -1,12 +1,18 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* background-image: url('../images/seattle-4k-wallpaper.jpg');
+    height: 1500px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: auto; */
+    
 }
 
 header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 3vw;
-    background-image: url('./assets/images/mtdavid.jpeg');
+    background-color: #ccc;
 }
 
 nav {
@@ -28,8 +34,13 @@ main {
 }
 
 .myimage {
-    height: 25vh;
-    width: 19vw;
+    height: 200px;
+    width: 300px;
+}
+
+.modals {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .contactModal {
@@ -38,7 +49,104 @@ main {
     background: #ccc;
     box-shadow: 4px 3px 8px 1px #969696;
   	-webkit-box-shadow: 4px 3px 8px 1px #969696;
-    width: 150px;
-    height: 150px;
+    width: 85%;
+    height: 65%;
+    margin: 100px;
     z-index: 1;
 }
+
+
+.projectModal {
+    display: none;
+    position: absolute;
+    background: #ccc;
+    box-shadow: 4px 3px 8px 1px #969696;
+  	-webkit-box-shadow: 4px 3px 8px 1px #969696;
+    width: 85%;
+    margin: 100px;
+    z-index: 1;
+}
+
+.projectGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    background-size: cover;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 10px;
+    height: 400px;
+    margin: 20px;
+}
+
+.card:hover {
+    background-image: url('../images/mtdavid.jpeg');
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+    }
+    @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+
+.resumeModal {
+    display: none;
+    position: absolute;
+    background: #ccc;
+    box-shadow: 4px 3px 8px 1px #969696;
+  	-webkit-box-shadow: 4px 3px 8px 1px #969696;
+    width: 85%;
+    height: 65%;
+    margin: 100px;
+    z-index: 1;
+}
+
+.resumeModal {
+    font-size: 50px;
+    text-align: center;
+}
+
+.resumeModal h3 {
+    padding: 2vw;
+}
+
+.resumeDnld {
+    padding: 30px;
+    font-size: 50px;
+    background-color: #278bce;
+    margin: 100px 20px 20px 20px;
+}
+
+.closeBtn {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
