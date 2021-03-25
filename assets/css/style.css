@@ -1,96 +1,6 @@
-body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* background-image: url('../images/seattle-4k-wallpaper.jpg');
-    height: 1500px;
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: auto; */
-    
-}
+/* animations for modals*/
 
-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 3vw;
-    background-color: #ccc;
-}
-
-nav {
-    position: absolute;
-    right: 2vw;
-}
-
-.navBtn {
-    font-size: 20px;
-    background-color: burlywood;
-    border: solid 1px black;
-    text-decoration: inherit;
-    color: inherit;
-}
-
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.myimage {
-    height: 200px;
-    width: 300px;
-}
-
-.modals {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.contactModal {
-    display: none;
-    position: absolute;
-    background: #ccc;
-    box-shadow: 4px 3px 8px 1px #969696;
-  	-webkit-box-shadow: 4px 3px 8px 1px #969696;
-    width: 85%;
-    height: 65%;
-    margin: 100px;
-    z-index: 1;
-}
-
-
-.projectModal {
-    display: none;
-    position: absolute;
-    background: #ccc;
-    box-shadow: 4px 3px 8px 1px #969696;
-  	-webkit-box-shadow: 4px 3px 8px 1px #969696;
-    width: 85%;
-    margin: 100px;
-    z-index: 1;
-}
-
-.projectGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.card {
-    background-size: cover;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
-    padding: 10px;
-    height: 400px;
-    margin: 20px;
-}
-
-.card:hover {
-    background-image: url('../images/mtdavid.jpeg');
-    animation: fadeIn ease 2s;
-    -webkit-animation: fadeIn ease 2s;
-    -moz-animation: fadeIn ease 2s;
-    -o-animation: fadeIn ease 2s;
-    -ms-animation: fadeIn ease 2s;
-    }
-    @keyframes fadeIn {
+@keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
     }
@@ -115,6 +25,205 @@ main {
     100% {opacity:1;}
 }
 
+@keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-250px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ } 
+
+ @keyframes fadeInRight {
+    0% {
+       opacity: 0;
+       transform: translateX(-250px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ } 
+
+ @keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(250px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ } 
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* background-image: url('../images/seattle-4k-wallpaper.jpg');
+    height: 1500px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: auto; */
+    
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3vw;
+    background-color: #ccc;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+nav {
+    position: absolute;
+    right: 2vw;
+}
+
+.navBtn {
+    font-size: 20px;
+    background-color: burlywood;
+    border: solid 1px black;
+    text-decoration: inherit;
+    color: inherit;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section h2 {
+    font-size: 40px;
+    padding: 20px;
+    margin: 30px;
+    border-bottom: 3px solid black;
+}
+
+.bio {
+    font-size: 30px;
+    margin: 30px;
+}
+
+.myimage {
+    height: 325px;
+    width: 500px;
+    border: 5px solid;
+    border-radius: 75%;
+    -moz-border-radius: 75%;
+    -webkit-border-radius: 75%;
+    -o-border-radius: 75%;
+}
+
+.modals {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contactModal {
+    display: none;
+    position: absolute;
+    background: #ccc;
+    box-shadow: 4px 3px 8px 1px #969696;
+  	-webkit-box-shadow: 4px 3px 8px 1px #969696;
+    width: 85%;
+    height: 65%;
+    margin: 100px;
+    z-index: 1;
+    animation: fadeInDown ease 2s;
+    -webkit-animation: fadeInRight ease 2s;
+    -moz-animation: fadeInRight ease 2s;
+    -o-animation: fadeInRight ease 2s;
+    -ms-animation: fadeInRight ease 2s;
+}
+
+
+.projectModal {
+    display: none;
+    position: absolute;
+    background: #ccc;
+    box-shadow: 4px 3px 8px 1px #969696;
+  	-webkit-box-shadow: 4px 3px 8px 1px #969696;
+    width: 85%;
+    margin: 100px;
+    z-index: 1;
+    animation: fadeInDown ease 2s;
+    -webkit-animation: fadeInDown ease 2s;
+    -moz-animation: fadeInDown ease 2s;
+    -o-animation: fadeInDown ease 2s;
+    -ms-animation: fadeInDown ease 2s;
+}
+
+.modalHeaders {
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 15px;
+    margin: 40px;
+    border-bottom: 3px solid;
+}
+
+.projectGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card {
+    background-size: cover;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 10px;
+    height: 400px;
+    margin: 20px;
+}
+
+#card1:hover {
+    background-image: url('../images/project1.jpeg');
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+
+#card2:hover {
+    background-image: url('../images/weatherpage.jpeg');
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+
+#card3:hover {
+    background-image: url('../images/codequiz.jpeg');
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+
+#card4:hover {
+    background-image: url('../images/passwordgenerator.jpeg');
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+
+.projectHeader {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bolder;
+    padding-top: 150px;
+}
 
 .resumeModal {
     display: none;
@@ -126,15 +235,11 @@ main {
     height: 65%;
     margin: 100px;
     z-index: 1;
-}
-
-.resumeModal {
-    font-size: 50px;
-    text-align: center;
-}
-
-.resumeModal h3 {
-    padding: 2vw;
+    animation: fadeInLeft ease 2s;
+    -webkit-animation: fadeInLeft ease 2s;
+    -moz-animation: fadeInLeft ease 2s;
+    -o-animation: fadeInLeft ease 2s;
+    -ms-animation: fadeInLeft ease 2s;
 }
 
 .resumeDnld {

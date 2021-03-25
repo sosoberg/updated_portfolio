@@ -22,10 +22,10 @@
             </nav>
         </header>
 
-        <main class="main">
+        <main>
             <section>
                 <h2>Biography</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </section>
             <aside>
                 <img class="myimage" src='./assets/images/me.jpg'>
@@ -33,38 +33,32 @@
         </main>
         <div class="modals">
             <div class="contactModal">
-                <h3>Contact Me</h3>
+                <h3 class="modalHeaders">Contact Me</h3>
                     <img class="linkedIn" src="">
                     <img class="github" src="">
                     <img class="emailLink" src="">
                     <button id="closeBtn" class="closeBtn">X</button>
             </div>
             <div class="projectModal">
-                <h3>My Projects</h3>
+                <h3 class="modalHeaders">My Projects</h3>
                     <div class="projectGrid">
-                        <a href="https://sosoberg.github.io/project_1/" class="card">
-                            <h4>Worth A Shot</h4>
+                        <a href="https://sosoberg.github.io/project_1/" id="card1" class="card">
+                            <h4 class="projectHeader">Worth A Shot</h4>
                         </a>
-                        <a href="https://github.com/sosoberg/portfolio" class="card">
-                            <h4>Project 2</h4>
+                        <a href="https://github.com/sosoberg/weather_app" id="card2" class="card">
+                            <h4 class="projectHeader">Weather App</h4>
                         </a>
-                        <a href="https://github.com/sosoberg/portfolio" class="card">
-                            <h4>Project 3</h4>
+                        <a href="https://github.com/sosoberg/code_quiz" id="card3" class="card">
+                            <h4 class="projectHeader">Code Quiz</h4>
                         </a>
-                        <a href="https://github.com/sosoberg/portfolio" class="card">
-                            <h4>Project 4</h4>
-                        </a>
-                        <a href="https://github.com/sosoberg/portfolio" class="card">
-                            <h4>Project 5</h4>
-                        </a>
-                        <a href="https://github.com/sosoberg/portfolio" class="card">
-                            <h4>Project 6</h4>
+                        <a href="https://github.com/sosoberg/password_generator" id="card4" class="card">
+                            <h4 class="projectHeader">Password Generator</h4>
                         </a>
                     </div>
                         <button id="closeBtn" class="closeBtn">X</button>
             </div>
             <div class="resumeModal">
-                <h3>Download My Resume!</h3>
+                <h3 class="modalHeaders">Download My Resume!</h3>
                     <button class="resumeDnld">Download</button>
                     <button id="closeBtn" class="closeBtn">X</button>
             </div>
