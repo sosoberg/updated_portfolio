@@ -2,27 +2,27 @@
 
 @keyframes fadeIn {
     0% {opacity:0;}
-    100% {opacity:1;}
+    100% {opacity:0.75;}
     }
     
     @-moz-keyframes fadeIn {
     0% {opacity:0;}
-    100% {opacity:1;}
+    100% {opacity:0.8;}
     }
     
     @-webkit-keyframes fadeIn {
     0% {opacity:0;}
-    100% {opacity:1;}
+    100% {opacity:0.8;}
     }
     
     @-o-keyframes fadeIn {
     0% {opacity:0;}
-    100% {opacity:1;}
+    100% {opacity:0.8;}
     }
     
     @-ms-keyframes fadeIn {
     0% {opacity:0;}
-    100% {opacity:1;}
+    100% {opacity:0.8;}
 }
 
 @keyframes fadeInDown {
@@ -31,7 +31,7 @@
        transform: translateY(-250px);
     }
     100% {
-       opacity: 1;
+       opacity: 0.8;
        transform: translateY(0);
     }
  } 
@@ -42,7 +42,7 @@
        transform: translateX(-250px);
     }
     100% {
-       opacity: 1;
+       opacity: 0.8;
        transform: translateY(0);
     }
  } 
@@ -53,24 +53,22 @@
        transform: translateX(250px);
     }
     100% {
-       opacity: 1;
+       opacity: 0.8;
        transform: translateY(0);
     }
  } 
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* background-image: url('../images/seattle-4k-wallpaper.jpg');
+    background-image: url('../images/hoodcanal.jpeg');
     height: 1500px;
     background-position: center; 
     background-repeat: no-repeat; 
-    background-size: auto; */
+    background-size: auto;
     
 }
 
 header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     padding: 3vw;
     background-color: #ccc;
     align-items: center;
@@ -81,21 +79,39 @@ header h1 {
 }
 
 nav {
-    position: absolute;
-    right: 2vw;
+    left: 0vw;
+    width: 100%;
+    background-color: #333;
 }
 
 .navBtn {
+    background-color: #333;
+    border: none;
+    text-align: center;
+    padding-right: 50px;
     font-size: 20px;
-    background-color: burlywood;
-    border: solid 1px black;
     text-decoration: inherit;
-    color: inherit;
+    color: white;
+    height: 60px;
+}
+
+.navBtn:hover {
+    background-color: #111;
+}
+
+.navBtn:focus {
+    background-color: #111;
 }
 
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+section {
+    margin: 30px;
+    background-color: brown;
+    opacity: 0.9;
 }
 
 section h2 {
@@ -140,6 +156,7 @@ section h2 {
     -moz-animation: fadeInRight ease 2s;
     -o-animation: fadeInRight ease 2s;
     -ms-animation: fadeInRight ease 2s;
+    opacity: 0.8;
 }
 
 
@@ -157,6 +174,7 @@ section h2 {
     -moz-animation: fadeInDown ease 2s;
     -o-animation: fadeInDown ease 2s;
     -ms-animation: fadeInDown ease 2s;
+    opacity: 0.8;
 }
 
 .modalHeaders {
@@ -173,6 +191,7 @@ section h2 {
 }
 
 .card {
+    background-image: url(../images/hoodcanal.jpeg);
     background-size: cover;
     border-style: solid;
     border-width: 1px;
@@ -180,6 +199,7 @@ section h2 {
     padding: 10px;
     height: 400px;
     margin: 20px;
+    opacity: 1;
 }
 
 #card1:hover {
@@ -232,7 +252,6 @@ section h2 {
     box-shadow: 4px 3px 8px 1px #969696;
   	-webkit-box-shadow: 4px 3px 8px 1px #969696;
     width: 85%;
-    height: 65%;
     margin: 100px;
     z-index: 1;
     animation: fadeInLeft ease 2s;
@@ -240,13 +259,24 @@ section h2 {
     -moz-animation: fadeInLeft ease 2s;
     -o-animation: fadeInLeft ease 2s;
     -ms-animation: fadeInLeft ease 2s;
+    opacity: 0.8;
+}
+
+.resumeImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+
 }
 
 .resumeDnld {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     padding: 30px;
     font-size: 50px;
     background-color: #278bce;
-    margin: 100px 20px 20px 20px;
 }
 
 .closeBtn {
@@ -255,3 +285,97 @@ section h2 {
     top: 0px;
 }
 
+@media only screen and (max-width: 1050px){
+    .contactModal {
+        margin-left: 50px;
+    }
+    .projectModal {
+        margin-left: 50px;
+    }
+
+    .resumeModal {
+        margin-left: 50px;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .main {
+        grid-template-columns: 1fr;
+    }
+    .myimage {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+        -moz-border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -o-border-radius: 100%;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    .projectGrid {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        height: 250px;
+    }
+    .projectHeader {
+        padding-top: 100px;
+    }
+}
+@media only screen and (max-width: 850px){
+    .resumeImg {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 550px){
+   nav {
+       display: grid;
+       grid-template-columns: 1fr;
+   }
+
+   header h1 {
+       font-size: 45px;
+   }
+
+   .contactModal {
+        margin-left: 25px;
+    }
+
+    .projectModal {
+        margin-left: 25px;
+    }
+
+    .resumeModal {
+        margin-left: 25px;
+    }
+
+   .navBtn {
+       padding: 0px;
+       margin: 0px;
+       height: 35px;
+       border-right: none;
+       border-bottom: 1px solid;
+   }
+
+   .myimage {
+       width: 300px;
+       height: 190px;
+   }
+
+   .bio {
+       font-size: 25px;
+   }
+}
+
+@media only screen and (max-width: 350px){
+    .modalHeaders {
+        font-size: 25px;
+    }
+
+    .resumeDnld {
+        padding: 10px;
+        font-size: 25px;
+    }
+}
