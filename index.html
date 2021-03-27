@@ -16,12 +16,13 @@
             <h1>Samuel Oberg</h1>
             
         </header>
+
         <nav>
             <button id="closeBtn" class="navBtn">Home</button>
-            <button id="contactBtn" class="navBtn">Contact</button>
             <button id="projectBtn" class="navBtn">Projects</button>                     
             <button id="resumeBtn" class="navBtn">Resume</button>
         </nav>
+
         <main class="main">
             <section>
                 <h2>Biography</h2>
@@ -29,16 +30,24 @@
             </section>
             <aside>
                 <img class="myimage" src='./assets/images/me.jpg'>
+                <div class="contactModal">
+                    <h3 class="modalHeaders">Contact Me</h3>
+                        <div class="iconGrid">
+                            <a href="https://github.com/sosoberg">
+                                <img class="icon" src="./assets/images/githubicon.png" alt="Sams Git Hub">
+                            </a>  
+                            <a href="https://www.linkedin.com/in/samuel-oberg-00b228110/">   
+                                <img class="icon" src="./assets/images/linkedicon.png" alt="SamsLinkedIn">         
+                            </a>
+                            <a href="mailto:samuelcoberg@gmail.com">   
+                                <img class="icon" src="./assets/images/gmailicon.png" alt="SamsEmail">         
+                            </a>
+                        </div>
+                </div>
             </aside>
         </main>
+
         <div class="modals">
-            <div class="contactModal">
-                <h3 class="modalHeaders">Contact Me</h3>
-                    <img class="linkedIn" src="">
-                    <img class="github" src="">
-                    <img class="emailLink" src="">
-                    <button id="closeBtn" class="closeBtn">X</button>
-            </div>
             <div class="projectModal">
                 <h3 class="modalHeaders">My Projects</h3>
                     <div class="projectGrid">
@@ -57,12 +66,14 @@
                     </div>
                         <button id="closeBtn" class="closeBtn">X</button>
             </div>
+
             <div class="resumeModal">
                 <h3 class="modalHeaders">Download My Resume!</h3>
                     <img class="resumeImg" src="./assets/images/resume.png"><a href="./assets/documents/resume.pdf"></a>
                     <button class="resumeDnld">Download</button>
                     <button id="closeBtn" class="closeBtn">X</button>
             </div>
+            
         </div>
 
         <script src="./assets/js/script.js" async defer></script>

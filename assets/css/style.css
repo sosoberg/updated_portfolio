@@ -1,8 +1,17 @@
 /* animations for modals*/
 
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 @keyframes fadeIn {
     0% {opacity:0;}
-    100% {opacity:0.75;}
+    100% {opacity:0.8;}
     }
     
     @-moz-keyframes fadeIn {
@@ -60,7 +69,8 @@
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-image: url('../images/hoodcanal.jpeg');
+    background-color: rgb(0, 67, 105);
+    background-image: url('../images/sunset.jpg');
     height: 1500px;
     background-position: center; 
     background-repeat: no-repeat; 
@@ -70,7 +80,8 @@ body {
 
 header {
     padding: 3vw;
-    background-color: #ccc;
+    background-color:grey;
+    opacity: 0.65;
     align-items: center;
 }
 
@@ -106,6 +117,11 @@ nav {
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
 }
 
 section {
@@ -127,6 +143,11 @@ section h2 {
 }
 
 .myimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -160px;
     height: 325px;
     width: 500px;
     border: 5px solid;
@@ -142,16 +163,17 @@ section h2 {
 }
 
 .contactModal {
-    display: none;
-    position: absolute;
-    background: #ccc;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-color: orange;
+    top: -150px;
     box-shadow: 4px 3px 8px 1px #969696;
   	-webkit-box-shadow: 4px 3px 8px 1px #969696;
     width: 85%;
-    height: 65%;
-    margin: 100px;
     z-index: 1;
-    animation: fadeInDown ease 2s;
+    animation: fadeInRight ease 2s;
     -webkit-animation: fadeInRight ease 2s;
     -moz-animation: fadeInRight ease 2s;
     -o-animation: fadeInRight ease 2s;
@@ -159,6 +181,29 @@ section h2 {
     opacity: 0.8;
 }
 
+.iconGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+    padding: 20px 20px 20px 20px;
+}
+
+.icon:hover {
+    animation: rotate;
+    animation-duration: 0.5s;
+}
+
+@-webkit-keyframes spin {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}   
+}
 
 .projectModal {
     display: none;
@@ -285,6 +330,13 @@ section h2 {
     top: 0px;
 }
 
+@media only screen and (max-width: 1330px){
+    .icon {
+        height: 110px;
+        width: 110px;
+    }
+}
+
 @media only screen and (max-width: 1050px){
     .contactModal {
         margin-left: 50px;
@@ -297,11 +349,13 @@ section h2 {
         margin-left: 50px;
     }
 }
+
 @media only screen and (max-width: 1000px){
     .main {
         grid-template-columns: 1fr;
     }
     .myimage {
+        top: 75px;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -309,6 +363,14 @@ section h2 {
         -moz-border-radius: 100%;
         -webkit-border-radius: 100%;
         -o-border-radius: 100%;
+    }
+    .contactModal {
+        top: 125px;
+        background-color: lightblue;
+    }
+    .icon {
+        height: 175px;
+        width: 175px;
     }
 }
 
@@ -323,9 +385,20 @@ section h2 {
         padding-top: 100px;
     }
 }
+
 @media only screen and (max-width: 850px){
     .resumeImg {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 760px){
+    .iconGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .icon {
+        padding: 20px;
     }
 }
 
@@ -362,6 +435,7 @@ section h2 {
    .myimage {
        width: 300px;
        height: 190px;
+       margin-top: 20px;
    }
 
    .bio {
