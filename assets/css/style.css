@@ -200,11 +200,6 @@ section h2 {
     animation-duration: 0.5s;
 }
 
-@-webkit-keyframes spin {
-    0%  {-webkit-transform: rotate(0deg);}
-    100% {-webkit-transform: rotate(360deg);}   
-}
-
 .projectModal {
     display: none;
     position: absolute;
