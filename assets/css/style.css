@@ -200,6 +200,14 @@ section h2 {
     animation-duration: 0.5s;
 }
 
+.phone {
+    background-color: orangered;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+}
+
 .projectModal {
     display: none;
     position: absolute;
@@ -416,6 +424,11 @@ section h2 {
     .icon {
         height: 175px;
         width: 175px;
+    }
+
+    .phone {
+        background-color: lightcyan;
+        color: black;
     }
 }
 
