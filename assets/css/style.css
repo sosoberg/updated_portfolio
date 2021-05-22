@@ -197,7 +197,7 @@ section h2 {
 
 .icon:hover {
     animation: rotate;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
 }
 
 .phone {
@@ -263,7 +263,7 @@ section h2 {
 }
 
 #card3 {
-    background-image: url(../images/codequiz.jpeg);
+    background-image: url(../images/tech_blog.jpeg);
     background-size: cover;
     border-style: solid;
     border-width: 1px;
@@ -275,7 +275,7 @@ section h2 {
 }
 
 #card4 {
-    background-image: url(../images/passwordgenerator.jpeg);
+    background-image: url(../images/seasonsgreetings.jpeg);
     background-size: cover;
     border-style: solid;
     border-width: 1px;
@@ -305,7 +305,7 @@ section h2 {
 }
 
 #card3:hover {
-    background-image: url('../images/codequizgithub.jpeg');
+    background-image: url('../images/tech_bloggithub.jpeg');
     animation: fadeIn ease 2s;
     -webkit-animation: fadeIn ease 2s;
     -moz-animation: fadeIn ease 2s;
@@ -314,7 +314,7 @@ section h2 {
 }
 
 #card4:hover {
-    background-image: url('../images/passwordgeneratorgithub.jpeg');
+    background-image: url('../images/seasonsgreetingsgithub.jpeg');
     animation: fadeIn ease 2s;
     -webkit-animation: fadeIn ease 2s;
     -moz-animation: fadeIn ease 2s;
